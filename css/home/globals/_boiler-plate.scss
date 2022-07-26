@@ -1,0 +1,15 @@
+@use '../util' as ut;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: ut.rem(90);
+}

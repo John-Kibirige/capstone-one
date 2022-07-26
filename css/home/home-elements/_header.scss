@@ -1,0 +1,10 @@
+.header {
+  background-color: red;
+  &-nav-one {
+    display: none;
+  }
+
+  &-nav-two {
+    display: none;
+  }
+}
