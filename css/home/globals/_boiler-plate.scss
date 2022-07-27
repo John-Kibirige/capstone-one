@@ -8,8 +8,55 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: ut.rem(90);
+  font-size: ut.rem(14);
+  background-color: ut.$violet;
+  color: ut.$white;
+  font-family: ut.$poppins;
+  background-image: url(../../../assets/bg-mobile.svg);
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+// Images and svg's
+
+img {
+  display: block;
+}
+
+svg {
+  fill: ut.$light-gray;
+  width: 28px;
+  transition: all 0.2s ease-in-out;
+}
+
+svg:hover {
+  fill: ut.$primary-light-cyan;
+}
+
+// All buttons
+button {
+  color: white;
+  background: ut.$primary-light-cyan;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: -3px 1px 10px purple;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: ut.$open-sans;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: hsl(180, 100%, 50%);
+  color: #000;
 }

@@ -1,0 +1,32 @@
+@use '../util' as ut;
+
+.main-intro {
+  margin-top: ut.rem(47);
+  padding: ut.rem(24) ut.rem(24) ut.rem(106) ut.rem(24);
+
+  &-title {
+    font-size: ut.rem(40);
+    text-transform: uppercase;
+    line-height: ut.rem(55);
+    font-weight: 700;
+    text-align: left;
+  }
+
+  &-description-cont {
+    background-color: ut.$primary-purple;
+    padding: ut.rem(25);
+    font-size: ut.rem(23);
+    margin-top: ut.rem(38);
+    border-radius: ut.rem(12);
+  }
+
+  &-dates {
+    margin-top: ut.rem(72);
+    font-size: ut.rem(24);
+    .main-intro-upper {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: ut.rem(30);
+    }
+  }
+}

@@ -1,10 +1,81 @@
+@use '../util' as ut;
+
 .header {
-  background-color: red;
-  &-nav-one {
+  display: flex;
+  margin: ut.rem(24);
+  position: relative;
+
+  &-container {
     display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: ut.$primary-dark-blue;
+      width: 100%;
+      top: ut.rem(30);
+      align-items: center;
+      border-radius: ut.rem(6);
+      border: thin solid ut.$white;
+    }
+  }
+
+  &-nav-one {
+    order: 3;
+    width: 100%;
+
+    .nav-one-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 30%;
+      margin-inline: auto;
+      margin-top: ut.rem(16);
+    }
   }
 
   &-nav-two {
-    display: none;
+    order: 2;
+
+    .logo {
+      display: none;
+    }
+
+    .nav-list {
+      text-align: center;
+    }
+
+    .nav-two-container {
+      margin-top: ut.rem(26);
+    }
+  }
+
+  &-humberger-menu {
+    margin-left: auto;
+    cursor: pointer;
+
+    .bar {
+      width: ut.rem(24);
+      height: ut.rem(4);
+      display: block;
+      background-color: ut.$white;
+      border-radius: ut.rem(20);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .bar:not(:first-of-type) {
+      margin-top: ut.rem(4);
+    }
+
+    &.active .bar:nth-child(2) {
+      transform: translateX(ut.rem(300));
+    }
+    &.active .bar:nth-child(1) {
+      transform: translate(0, ut.rem(8)) rotate(45deg);
+    }
+    &.active .bar:nth-child(3) {
+      transform: translate(0, -(ut.rem(8))) rotate(-45deg);
+    }
   }
 }

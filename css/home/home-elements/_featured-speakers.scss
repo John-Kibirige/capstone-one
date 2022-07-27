@@ -1,0 +1,97 @@
+@use '../util' as ut;
+
+.featured-speakers {
+  font-family: ut.$open-sans;
+  padding: 16px;
+
+  &-title {
+    text-align: center;
+    font-size: 24px;
+    margin-block: 8px 32px;
+  }
+
+  &-all-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  &-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .card-image-container {
+      .card-bg-image {
+        background-image: url(../../../assets/checker-image.jpg);
+        background-repeat: no-repeat;
+        width: 65px;
+        height: 64px;
+        background-size: cover;
+      }
+
+      img {
+        width: 80px;
+        border-radius: 50%;
+        margin-top: -53px;
+        margin-left: 7px;
+      }
+    }
+
+    .card-text {
+      .card-title {
+        font-size: 13px;
+      }
+
+      .card-description {
+        font-size: 11px;
+        margin-block: 4px;
+        color: ut.$green;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 15%;
+          height: 2px;
+          background-color: ut.$primary-light-cyan;
+          margin-top: 6px;
+        }
+      }
+
+      .academic-bg {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .featured-speakers-card.active {
+    display: none;
+  }
+}
+
+// special case
+.show-more,
+.show-less {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  border: thin solid white;
+  padding: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+
+  img {
+    width: 20px;
+  }
+
+  &:hover {
+    background-color: white;
+    color: ut.$bluish-gray;
+  }
+
+  &.active {
+    display: none;
+  }
+}
