@@ -4,19 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- font -->
-    <!-- Roboto -->
+    <!-- fonts used -->
+    <!-- cocogoose  -->
+    <link href="http://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet" />
+
+    <!-- lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- open sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <!-- styles link -->
@@ -24,45 +20,69 @@
     <title>About</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
-      <!-- first nav bar -->
-      <nav class="header-nav-one">
-        <ul>
-          <li>
-            <a href="#"
-              ><img src="./assets/facebook-icon.svg" alt="facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="./assets/icon-twitter.svg" alt="twitter"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="../assets/icon-instagram.svg" alt="" /></a>
-          </li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </nav>
-
-      <!-- second nav bar -->
-      <nav class="header-nav-two">
-        <a href="./index.html"
-          ><img src="../assets/summit-logo.png" alt="logo"
-        /></a>
-
-        <div class="nav-two-container">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="./html/about.html">About</a></li>
-            <li class="nav-item"><a href="#"></a>Program</li>
-            <li class="nav-item"><a href="#"></a>Join</li>
-            <li class="nav-item"><a href="#"></a>Sponsor</li>
-            <li class="nav-item"><a href="#">News</a></li>
+      <div class="header-container">
+        <!-- first nav bar -->
+        <nav class="header-nav-one">
+          <ul class="nav-one-links">
+            <li>
+              <a href="#">
+                <?xml version="1.0"?><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="50px"
+                  height="50px"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                  <title>Twitter</title>
+                  <path
+                    d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  />
+                </svg>
+              </a>
+            </li>
           </ul>
-        </div>
+        </nav>
 
-        <div class="nav-btn">cc Campaign</div>
-      </nav>
+        <!-- second nav bar -->
+        <nav class="header-nav-two">
+          <a href="./index.html"
+            ><img src="./assets/summit-logo.png" alt="logo" class="logo"
+          /></a>
+
+          <div class="nav-two-container">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="../index.html">Home</a></li>
+              <li class="nav-item"><a href="#">Program</a></li>
+              <li class="nav-item"><a href="#join">Join</a></li>
+              <li class="nav-item"><a href="#">Sponsor</a></li>
+              <li class="nav-item"><a href="#">News</a></li>
+            </ul>
+          </div>
+
+          <button class="nav-btn" type="button">Register</button>
+        </nav>
+      </div>
       <!-- humberger menu -->
       <div class="header-humberger-menu">
         <span class="bar"></span>
@@ -74,31 +94,31 @@
     <main class="main">
       <!-- introduction section -->
       <section class="main-intro">
-        <h1 class="main-header">Mental Health Global Summit</h1>
-        <div class="main-description-cont">
-          <p class="main-description">
+        <h1 class="main-intro-title">Mental Health Global Summit 2022</h1>
+        <div class="main-intro-description-cont">
+          <p class="main-intro-description">
             The Mental Health Global Summit is a world-class forum for you to
             collaborate with national and international mental health leaders,
-            while gaining tools to improve your approach to client care.
-          </p>
-          <p>
+            while gaining tools to improve your approach to client care. <br />
+            <br />
             The summit brings together the community of experts and academicians
-            from all over the world
+            from all over the world. We hope to invite many people including
+            professionals, individuals, organizations and stake holders.
           </p>
-          <p>
+          <p class="display-on-desk">
             This year we hope to expand our invitation list including
             organizations and individuals who want to work with us on shared
             projects that advance th cause of our organization, free culture and
             open knowledge.
           </p>
-          <p>
+          <p class="display-on-desk">
             So if you are active and engaged in the worlds of open content and
             knowledge related to mental health we hope you will consider joining
             us this year to build a stronger more vibrant mental health free
             society together
           </p>
         </div>
-        <div class="contact-email">
+        <div class="main-intro-contact-email">
           <p>
             Please contact us per Email for any further questions about PLC
             Global Summit 2022!
@@ -112,10 +132,13 @@
         <h2>PLC Global Summit 2015 logo</h2>
         <p class="logo-description">
           The logo of PLC Global Summit 2022 was decided through the logo
-          competition from 6 May to 8 June. After online public voting and
-          selection committee's judging process and the logo from Kundos
-          Igdaliah won the price. After consultation with the board we optimized
-          the price winning logo for this year's summit as following
+          competition from 6 May to 8 June.
+          <span class="display-on-desk">
+            After online public voting and selection committee's judging process
+            and the logo from Kundos Igdaliah won the price. After consultation
+            with the board we optimized the price winning logo for this year's
+            summit as following
+          </span>
         </p>
 
         <div class="logo-container">
@@ -129,28 +152,53 @@
         <p class="past-summits-description">
           Take a look at the last two PLC which took place in Thailand and India
         </p>
-        <div class="past-summit-image-container">
-          <img
-            src="../assets/group-tailand.webp"
-            alt="group picture in thailand"
-          />
-          <img
-            src="../assets/group-picture-india.jpg"
-            alt="Group picture in India"
-          />
+        <div class="past-summit-container">
+          <div class="thailand visited">
+            <div class="wrapper">
+              <p>2019</p>
+              <p>PLC Global Summit 2019 in Bangkok, Thailand</p>
+            </div>
+          </div>
+          <div class="india visited">
+            <div class="wrapper">
+              <p>2017</p>
+              <p>PLC Global Summit 2017 in Mumbai, India</p>
+            </div>
+          </div>
         </div>
       </article>
     </main>
 
+    <!-- footer -->
     <footer class="footer">
       <div class="footer-partner">
-        <h4 class="footer-partner-title">Partner</h4>
-        <div class="parter-container">
-          <img src="../assets/mozilla-1.svg" alt="mozilla" />
-          <img src="../assets/google.svg" alt="Google" />
-          <img src="../assets/naver-2.svg" alt="Naver" />
-          <img src="../assets/airbnb.svg" alt="airbnb" />
-          <img src="../assets/tesla.svg" alt="Tesla" />
+        <h4 class="footer-partner-title">Partners</h4>
+        <div class="footer-partner-container">
+          <img
+            src="../assets/mozilla-1.svg"
+            alt="mozilla"
+            class="footer-partner-image reduce-80"
+          />
+          <img
+            src="../assets/google.svg"
+            alt="Google"
+            class="footer-partner-image google"
+          />
+          <img
+            src="../assets/naver-2.svg"
+            alt="Naver"
+            class="footer-partner-image reduce-80"
+          />
+          <img
+            src="../assets/airbnb.svg"
+            alt="airbnb"
+            class="footer-partner-image"
+          />
+          <img
+            src="../assets/tesla.svg"
+            alt="Tesla"
+            class="footer-partner-image"
+          />
         </div>
       </div>
 
@@ -162,5 +210,7 @@
         </p>
       </div>
     </footer>
+    <!-- script -->
+    <script src="../Javascript/about.js"></script>
   </body>
 </html>

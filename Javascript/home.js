@@ -73,10 +73,6 @@ const speakersData = [
   },
 ];
 
-// chevron icons
-const chevronUp = '../images/chevron-up.svg';
-const chevronDown = '../images/chevron-down.svg';
-
 const featuredSpeakerLiteral = ` 
     <section class="featured-speakers">
     <h4 class="featured-speakers-title">Featured Speakers</h4>
@@ -120,7 +116,7 @@ const featuredSpeakerLiteral = `
   </section>
 `;
 
-// create a separate div element to add the created literal as inner
+// create a separate div element to add the created literal as inner text
 const featureSpeakers = document.createElement('div');
 featureSpeakers.innerHTML = featuredSpeakerLiteral;
 
