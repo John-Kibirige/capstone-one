@@ -1,9 +1,8 @@
 @use '../util' as ut;
 
 .main-program {
-  background-color: ut.$light-gray;
-  border-radius: ut.rem(10) ut.rem(10) 0 0;
-  color: ut.$primary-dark-cyan;
+  background-color: ut.$secondary-dark-blue;
+  color: ut.$secondary-gray;
   padding: ut.rem(36) ut.rem(16);
 
   &-title {
@@ -14,23 +13,23 @@
     &::after {
       content: '';
       display: block;
-      width: 100%;
+      width: 20%;
       height: ut.rem(3);
-      background-color: ut.$primary-dark-blue;
-      margin-bottom: ut.rem(50);
+      background-color: ut.$secondary-orange;
+      margin: ut.rem(15) auto;
     }
   }
 
   &-cards {
+    margin-top: ut.rem(36);
+
     .card {
       display: grid;
       grid-template-columns: ut.rem(70) ut.rem(95) auto;
       grid-template-areas: 'ico title description description';
       align-items: center;
       margin-top: ut.rem(12);
-      background: ut.$light-gray;
-      border-radius: ut.rem(7);
-      box-shadow: ut.rem(1) ut.rem(1) ut.rem(5) ut.$gray-83;
+      background: ut.$secondary-light-blue;
       padding: ut.rem(12) ut.rem(8);
 
       &-icon {
@@ -40,13 +39,14 @@
 
       &-title {
         grid-area: title;
-        font-size: ut.rem(14);
-        color: ut.$blue-normal;
+        font-size: ut.rem(15);
+        color: ut.$secondary-orange;
       }
 
       &-description {
         grid-area: description;
-        font-size: ut.rem(12);
+        font-size: ut.rem(13);
+        letter-spacing: ut.rem(0.3);
       }
     }
   }
@@ -59,11 +59,12 @@
     padding: ut.rem(12) ut.rem(12);
     margin-top: ut.rem(46);
     margin-inline: auto;
-    background-color: ut.$gray-50;
-    color: ut.$white;
+    background-color: ut.$secondary-orange;
+    color: ut.$secondary-gray;
+    margin-bottom: ut.rem(14);
 
     &:hover {
-      color: ut.$white;
+      color: ut.$secondary-gray;
       transform: scale(1.05);
     }
   }

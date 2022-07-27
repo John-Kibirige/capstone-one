@@ -2,31 +2,45 @@
 
 .main-intro {
   margin-top: ut.rem(47);
-  padding: ut.rem(24) ut.rem(24) ut.rem(106) ut.rem(24);
+  padding: ut.rem(24) ut.rem(24) ut.rem(88) ut.rem(24);
 
   &-title {
-    font-size: ut.rem(40);
+    font-family: ut.$poppins;
+    font-size: ut.rem(35);
     text-transform: uppercase;
-    line-height: ut.rem(55);
+    line-height: ut.rem(40);
     font-weight: 700;
     text-align: left;
+    color: ut.$secondary-orange;
+    background: url(https://previews.123rf.com/images/daneeshe/daneeshe1503/daneeshe150300038/37838396-abstract-orange-medical-background-world-health-day-vector-illustration.jpg?fj=1);
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   &-description-cont {
-    background-color: ut.$primary-purple;
     padding: ut.rem(25);
-    font-size: ut.rem(23);
+    font-size: ut.rem(16);
     margin-top: ut.rem(38);
-    border-radius: ut.rem(12);
+    text-align: left;
+    border: 3px solid ut.$white;
+    background-color: ut.$secondary-gray;
   }
 
   &-dates {
-    margin-top: ut.rem(72);
-    font-size: ut.rem(24);
+    font-family: ut.$open-sans;
+    margin-top: ut.rem(22);
+    font-size: ut.rem(17);
+
     .main-intro-upper {
+      font-family: ut.$poppins;
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: ut.rem(30);
+      font-size: ut.rem(23);
+      font-weight: 500;
+      margin-bottom: ut.rem(14);
+    }
+
+    p {
+      margin-top: ut.rem(7);
     }
   }
 }

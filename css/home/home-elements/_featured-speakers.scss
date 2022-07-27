@@ -2,64 +2,77 @@
 
 .featured-speakers {
   font-family: ut.$open-sans;
-  padding: 16px;
+  padding: ut.rem(16);
 
   &-title {
     text-align: center;
-    font-size: 24px;
-    margin-block: 8px 32px;
+    font-size: ut.rem(20);
+    margin-block: ut.rem(8) ut.rem(32);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 12%;
+      height: 0.1875rem;
+      background-color: #ec5241;
+      margin: ut.rem(11) auto;
+    }
   }
 
   &-all-cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: ut.rem(25);
   }
 
   &-card {
     display: flex;
-    gap: 10px;
+    gap: ut.rem(10);
     align-items: center;
 
     .card-image-container {
       .card-bg-image {
         background-image: url(../../../assets/checker-image.jpg);
         background-repeat: no-repeat;
-        width: 65px;
-        height: 64px;
+        width: ut.rem(64);
+        height: ut.rem(64);
         background-size: cover;
       }
 
       img {
-        width: 80px;
-        border-radius: 50%;
-        margin-top: -53px;
-        margin-left: 7px;
+        width: ut.rem(80);
+        margin-top: -(ut.rem(53));
+        margin-left: ut.rem(7);
       }
     }
 
     .card-text {
       .card-title {
-        font-size: 13px;
+        font-size: ut.rem(13);
+        font-weight: 900;
       }
 
       .card-description {
-        font-size: 11px;
-        margin-block: 4px;
-        color: ut.$green;
+        font-size: ut.rem(11);
+        margin-block: ut.rem(4);
+        color: ut.$secondary-orange;
+        font-style: italic;
+        font-weight: 700;
 
         &::after {
           content: '';
           display: block;
-          width: 15%;
-          height: 2px;
-          background-color: ut.$primary-light-cyan;
-          margin-top: 6px;
+          width: 10%;
+          height: ut.rem(2);
+          background-color: ut.$secondary-light-blue;
+          margin-top: ut.rem(6);
         }
       }
 
       .academic-bg {
-        font-size: 10px;
+        font-size: ut.rem(11);
+        font-weight: 600;
+        margin-top: ut.rem(6);
       }
     }
   }
@@ -74,16 +87,16 @@
 .show-less {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: ut.rem(12);
   align-items: center;
-  border: thin solid white;
-  padding: 14px;
+  border: ut.rem(2) solid rgba(ut.$secondary-light-blue, 0.6);
+  padding: ut.rem(14);
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
 
   img {
-    width: 20px;
+    width: ut.rem(20);
   }
 
   &:hover {

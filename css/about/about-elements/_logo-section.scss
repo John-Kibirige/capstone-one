@@ -1,0 +1,43 @@
+@use '../util' as ut;
+
+.logo-section {
+  background-color: #fff;
+  padding: ut.rem(36) ut.rem(16);
+  text-align: center;
+  border-bottom: ut.rem(2) solid ut.$secondary-gray;
+
+  h2 {
+    width: 50%;
+    margin-inline: auto;
+    font-weight: 700;
+    font-size: ut.rem(21);
+    margin-bottom: ut.rem(17);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 12%;
+      height: 0.1875rem;
+      background-color: #ec5241;
+      margin: 0.6875rem auto;
+    }
+  }
+
+  .logo-description {
+    .display-on-desk {
+      display: none;
+    }
+  }
+
+  .logo-container {
+    border: ut.rem(2) solid ut.$secondary-gray;
+    padding: ut.rem(47);
+    margin-top: ut.rem(50);
+
+    img {
+      width: ut.rem(253);
+      display: block;
+      margin-inline: auto;
+    }
+  }
+}

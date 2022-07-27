@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -14,10 +15,10 @@ html {
 
 body {
   font-size: ut.rem(14);
-  background-color: ut.$violet;
-  color: ut.$white;
-  font-family: ut.$poppins;
-  background-image: url(../../../assets/bg-mobile.svg);
+  background-color: ut.$secondary-gray;
+  color: ut.$secondary-dark-blue;
+  font-family: ut.$open-sans;
+  background-image: url(../../../assets/main-bg-project.jpg);
   background-size: contain;
   background-position: top left;
   background-repeat: no-repeat;
@@ -30,23 +31,21 @@ img {
 }
 
 svg {
-  fill: ut.$light-gray;
+  fill: ut.$white;
   width: 28px;
   transition: all 0.2s ease-in-out;
 }
 
 svg:hover {
-  fill: ut.$primary-light-cyan;
+  fill: ut.$secondary-orange;
 }
 
 // All buttons
 button {
-  color: white;
-  background: ut.$primary-light-cyan;
+  color: ut.$secondary-gray;
+  background: ut.$secondary-orange;
   border: none;
   padding: 10px 20px;
-  border-radius: 20px;
-  box-shadow: -3px 1px 10px purple;
   font-size: 16px;
   font-weight: 500;
   font-family: ut.$open-sans;
@@ -57,6 +56,5 @@ button {
 }
 
 button:hover {
-  background-color: hsl(180, 100%, 50%);
-  color: #000;
+  transform: scale(1.05);
 }

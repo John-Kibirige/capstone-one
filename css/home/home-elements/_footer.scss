@@ -2,13 +2,13 @@
 
 .footer {
   &-partner {
-    background-color: ut.$bluish-gray;
+    background-color: ut.$footer-based;
     padding: 24px;
 
     &-title {
       text-align: center;
-      color: ut.$primary-light-cyan;
-      font-size: 26px;
+      color: ut.$secondary-gray;
+      font-size: 20px;
       margin-bottom: 23px;
       width: 34%;
       margin-inline: auto;
@@ -17,8 +17,10 @@
         display: block;
         content: '';
         background-color: ut.$gray-83;
-        width: 100%;
+        width: 37%;
         height: 2px;
+        margin-inline: auto;
+        margin-top: 11px;
       }
     }
 
@@ -37,8 +39,8 @@
   }
 
   &-copyright {
-    background: white;
-    color: black;
+    background: inherit;
+    color: ut.$secondary-dark-blue;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -56,7 +58,8 @@
 }
 
 .google {
+  color: ut.$secondary-gray;
   text-align: center;
   font-size: 24px;
-  height: 45px;
+  height: ut.rem(31);
 }

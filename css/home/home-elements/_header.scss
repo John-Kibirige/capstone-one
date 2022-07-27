@@ -12,12 +12,11 @@
       display: flex;
       flex-direction: column;
       position: absolute;
-      background-color: ut.$primary-dark-blue;
+      background-color: ut.$secondary-dark-blue;
       width: 100%;
-      top: ut.rem(30);
+      top: ut.rem(32);
       align-items: center;
       border-radius: ut.rem(6);
-      border: thin solid ut.$white;
     }
   }
 
@@ -54,13 +53,14 @@
   &-humberger-menu {
     margin-left: auto;
     cursor: pointer;
+    padding: ut.rem(5);
+    background-color: white;
 
     .bar {
       width: ut.rem(24);
       height: ut.rem(4);
       display: block;
-      background-color: ut.$white;
-      border-radius: ut.rem(20);
+      background-color: ut.$secondary-dark-blue;
       transition: all 0.2s ease-in-out;
     }
 
