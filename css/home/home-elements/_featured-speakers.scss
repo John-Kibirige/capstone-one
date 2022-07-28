@@ -5,7 +5,7 @@
   padding: ut.rem(16);
 
   @include ut.breakpoint {
-    padding: 40px 155px;
+    padding: ut.rem(29) ut.rem(155);
   }
 
   &-title {
@@ -14,7 +14,7 @@
     margin-block: ut.rem(8) ut.rem(32);
 
     @include ut.breakpoint {
-      font-size: 29px;
+      font-size: ut.rem(29);
     }
 
     &::after {
@@ -60,9 +60,9 @@
         margin-left: ut.rem(7);
 
         @include ut.breakpoint {
-          width: 106px;
-          margin-top: -48px;
-          margin-left: 18px;
+          width: ut.rem(106);
+          margin-top: -3rem;
+          margin-left: ut.rem(18);
         }
       }
     }
@@ -72,7 +72,7 @@
         font-size: ut.rem(13);
         font-weight: 900;
         @include ut.breakpoint {
-          font-size: 20px;
+          font-size: ut.rem(20);
         }
       }
 
@@ -83,7 +83,7 @@
         font-style: italic;
         font-weight: 700;
         @include ut.breakpoint {
-          font-size: 14px;
+          font-size: ut.rem(14);
         }
 
         &::after {
@@ -101,7 +101,7 @@
         font-weight: 600;
         margin-top: ut.rem(6);
         @include ut.breakpoint {
-          font-size: 14px;
+          font-size: ut.rem(14);
         }
       }
     }

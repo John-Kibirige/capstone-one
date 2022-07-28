@@ -7,7 +7,7 @@
 
   @include ut.breakpoint {
     margin: 0;
-    box-shadow: 1px 1px 12px ut.$secondary-light-blue;
+    box-shadow: ut.rem(1) ut.rem(1) ut.rem(12) ut.$secondary-light-blue;
   }
 
   &-container {
@@ -22,6 +22,10 @@
       top: ut.rem(32);
       align-items: center;
       border-radius: ut.rem(6);
+      width: 100vw;
+      height: 100vh;
+      top: -(ut.rem(26));
+      left: -(ut.rem(29));
     }
 
     @include ut.breakpoint {
@@ -32,27 +36,43 @@
     }
   }
 
+  &-nav-one-container {
+    @include ut.breakpoint {
+      margin-left: auto;
+      margin-right: ut.rem(100);
+    }
+  }
+
   &-nav-one {
     order: 3;
     width: 100%;
+    display: flex;
+    justify-content: center;
 
     @include ut.breakpoint {
       background-color: ut.$secondary-dark-blue;
     }
 
     .nav-one-links {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      width: 30%;
-      margin-inline: auto;
-      margin-top: ut.rem(16);
+      margin-top: ut.rem(12);
+
+      li {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          margin-right: ut.rem(12);
+        }
+      }
 
       @include ut.breakpoint {
         margin-top: 0;
-        width: 34vw;
-        height: 45px;
-        margin-right: 7%;
+
+        li {
+          &:not(:last-child) {
+            margin-right: ut.rem(12);
+          }
+        }
       }
     }
   }
@@ -63,7 +83,7 @@
     @include ut.breakpoint {
       display: flex;
       background-color: ut.$white;
-      padding: 12px 8%;
+      padding: ut.rem(12) 8%;
       justify-content: space-around;
       align-items: center;
     }
@@ -73,7 +93,7 @@
 
       @include ut.breakpoint {
         display: block;
-        width: 220px;
+        width: ut.rem(220);
       }
     }
 
@@ -83,14 +103,14 @@
       @include ut.breakpoint {
         text-align: left;
         display: flex;
-        margin-left: 50px;
+        margin-left: ut.rem(50);
       }
 
       .nav-item {
         @include ut.breakpoint {
           margin-right: 4vw;
           a {
-            font-size: 16px;
+            font-size: 1rem;
             color: ut.$secondary-dark-blue;
 
             &:hover {
@@ -102,7 +122,7 @@
     }
 
     .nav-two-container {
-      margin-top: ut.rem(26);
+      margin-top: ut.rem(94);
 
       @include ut.breakpoint {
         color: ut.$secondary-orange;
@@ -114,6 +134,7 @@
   &-humberger-menu {
     margin-left: auto;
     cursor: pointer;
+    z-index: 10;
     padding: ut.rem(5);
     background-color: white;
     @include ut.breakpoint {

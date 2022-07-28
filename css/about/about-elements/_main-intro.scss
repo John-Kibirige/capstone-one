@@ -21,10 +21,10 @@
     margin-bottom: ut.rem(40);
 
     @include ut.breakpoint {
-      margin-top: 23px;
+      margin-top: ut.rem(23);
       max-width: 50vw;
       margin-inline: auto;
-      font-size: 41px;
+      font-size: ut.rem(41);
 
       &::after {
         content: '';
@@ -45,8 +45,8 @@
     @include ut.breakpoint {
       width: 70%;
       margin-inline: auto;
-      font-size: 16px;
-      padding: 30px 36px;
+      font-size: 1rem;
+      padding: ut.rem(30) ut.rem(36);
     }
   }
 
@@ -60,7 +60,7 @@
     @include ut.breakpoint {
       display: block;
       text-align: center;
-      margin-top: 12px;
+      margin-top: ut.rem(12);
     }
   }
 
@@ -72,7 +72,7 @@
       text-align: center;
 
       @include ut.breakpoint {
-        font-size: 20px;
+        font-size: ut.rem(20);
       }
     }
 
@@ -84,7 +84,7 @@
       color: ut.$secondary-dark-blue;
 
       @include ut.breakpoint {
-        font-size: 24px;
+        font-size: ut.rem(24);
       }
 
       &:hover {
@@ -103,7 +103,7 @@
         margin-inline: auto;
 
         @include ut.breakpoint {
-          width: 251px;
+          width: ut.rem(51);
         }
       }
     }

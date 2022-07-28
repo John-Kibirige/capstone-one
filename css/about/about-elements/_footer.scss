@@ -14,7 +14,7 @@
       gap: ut.rem(90);
 
       .copy-rights {
-        font-size: 24px;
+        font-size: ut.rem(24);
         flex: 2;
         font-weight: 900;
         text-align: right;

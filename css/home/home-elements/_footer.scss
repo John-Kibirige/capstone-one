@@ -3,16 +3,16 @@
 .footer {
   &-partner {
     background-color: ut.$footer-based;
-    padding: 24px;
+    padding: ut.rem(24);
     @include ut.breakpoint {
-      padding: 32px 0 49px;
+      padding: 2rem 0 ut.rem(49);
     }
 
     &-title {
       text-align: center;
       color: ut.$secondary-gray;
-      font-size: 20px;
-      margin-bottom: 23px;
+      font-size: ut.rem(20);
+      margin-bottom: ut.rem(23);
       width: 34%;
       margin-inline: auto;
 
@@ -20,10 +20,10 @@
         display: block;
         content: '';
         background-color: ut.$gray-83;
-        width: 20px;
-        height: 2px;
+        width: ut.rem(20);
+        height: ut.rem(2);
         margin-inline: auto;
-        margin-top: 11px;
+        margin-top: ut.rem(11);
       }
     }
 
@@ -31,7 +31,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      row-gap: 12px;
+      row-gap: ut.rem(12);
 
       @include ut.breakpoint {
         gap: 4%;
@@ -40,9 +40,9 @@
   }
 
   &-partner-image {
-    width: 100px;
+    width: ut.rem(100);
     display: block;
-    margin-right: 10px;
+    margin-right: ut.rem(10);
   }
 
   &-copyright {
@@ -51,14 +51,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 24px 0;
+    padding: ut.rem(24) 0;
 
     p span {
       display: block;
     }
 
     .copy-rights {
-      font-size: 18px;
+      font-size: ut.rem(18);
       font-weight: 500;
     }
 
@@ -71,12 +71,12 @@
 }
 
 .reduce-80 {
-  width: 80px;
+  width: ut.rem(80);
 }
 
 .google {
   color: ut.$secondary-gray;
   text-align: center;
-  font-size: 24px;
+  font-size: ut.rem(24);
   height: ut.rem(31);
 }

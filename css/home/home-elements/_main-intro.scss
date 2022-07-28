@@ -34,7 +34,7 @@
     font-size: ut.rem(16);
     margin-top: ut.rem(38);
     text-align: left;
-    border: 3px solid ut.$white;
+    border: ut.rem(3) solid ut.$white;
     background-color: ut.$secondary-gray;
 
     @include ut.breakpoint {

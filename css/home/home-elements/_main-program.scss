@@ -33,7 +33,7 @@
 
     @include ut.breakpoint {
       display: flex;
-      gap: 3px;
+      gap: ut.rem(3);
       margin-inline: 12%;
     }
 
@@ -51,7 +51,7 @@
         display: flex;
         flex-direction: column;
         flex: 1;
-        padding-block: 16px;
+        padding-block: 1rem;
       }
 
       &-icon {
@@ -64,8 +64,8 @@
         font-size: ut.rem(15);
         color: ut.$secondary-orange;
         @include ut.breakpoint {
-          font-size: 20px;
-          line-height: 42px;
+          font-size: ut.rem(18);
+          line-height: ut.rem(42);
         }
       }
 
@@ -76,13 +76,13 @@
 
         @include ut.breakpoint {
           text-align: center;
-          font-size: 14px;
-          line-height: 23px;
+          font-size: ut.rem(14);
+          line-height: ut.rem(23);
         }
       }
 
       &:hover {
-        border: 3px solid ut.$white;
+        border: ut.rem(3) solid ut.$white;
       }
     }
   }
@@ -111,9 +111,9 @@
 
   .see-whole-program {
     display: block;
-    margin-top: 52px;
-    letter-spacing: 1.2px;
-    font-size: 15px;
+    margin-top: ut.rem(52);
+    letter-spacing: ut.rem(1.2);
+    font-size: ut.rem(15);
     font-weight: 400;
 
     &::after {
@@ -124,7 +124,7 @@
       background-color: ut.$white;
       margin: 0 auto;
       @include ut.breakpoint {
-        width: 215px;
+        width: ut.rem(215);
       }
     }
   }

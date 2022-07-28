@@ -6,13 +6,13 @@ a {
   color: white;
   font-family: ut.$open-sans;
   font-weight: 700;
-  line-height: 30px;
-  font-size: 21px;
+  line-height: ut.rem(30);
+  font-size: ut.rem(21);
   text-align: center;
   transition: all 0.2s ease-in-out;
 
   @include ut.breakpoint {
-    font-size: 14px;
+    font-size: ut.rem(14);
   }
 }
 a:hover {
@@ -21,7 +21,7 @@ a:hover {
 
 li {
   list-style-type: none;
-  margin-bottom: 12px;
+  margin-bottom: ut.rem(12);
 
   @include ut.breakpoint {
     margin: 0;

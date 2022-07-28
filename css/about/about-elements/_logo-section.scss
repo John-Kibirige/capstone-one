@@ -17,11 +17,11 @@
     margin-bottom: ut.rem(17);
 
     @include ut.breakpoint {
-      font-size: 30px;
+      font-size: ut.rem(30);
       width: 100%;
 
       p {
-        font-size: 16px;
+        font-size: 1rem;
       }
     }
 
@@ -34,7 +34,7 @@
       margin: 0.6875rem auto;
 
       @include ut.breakpoint {
-        width: 40px;
+        width: ut.rem(40);
       }
     }
   }
