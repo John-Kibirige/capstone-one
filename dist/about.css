@@ -598,6 +598,7 @@ li {
     background-color: #272930;
     color: #d4d4d4;
     gap: 5.625rem;
+    padding-block: 3.5rem 2.625rem;
   }
   .footer-copyright .copy-rights {
     font-size: 1.5rem;

@@ -310,6 +310,14 @@ li {
   align-items: center;
   padding: 1.5rem 0;
 }
+@media (min-width: 48em) {
+  .footer-copyright {
+    justify-content: center;
+    gap: 4.75rem;
+    width: 72%;
+    margin-block: 2.625rem;
+  }
+}
 .footer-copyright p span {
   display: block;
 }
@@ -320,6 +328,13 @@ li {
 @media (min-width: 48em) {
   .footer-copyright p span {
     display: inline;
+  }
+  .footer-copyright .copy-rights {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  .reserved {
+    font-size: 1rem;
   }
 }
 .reduce-80 {
