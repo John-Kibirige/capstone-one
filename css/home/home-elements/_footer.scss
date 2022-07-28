@@ -19,7 +19,7 @@
       &::after {
         display: block;
         content: '';
-        background-color: ut.$gray-83;
+        background-color: ut.$secondary-orange;
         width: ut.rem(20);
         height: ut.rem(2);
         margin-inline: auto;
@@ -53,18 +53,34 @@
     align-items: center;
     padding: ut.rem(24) 0;
 
+    @include ut.breakpoint {
+      width: 52%;
+      margin: 2.5rem auto;
+    }
+
     p span {
       display: block;
     }
 
     .copy-rights {
-      font-size: ut.rem(18);
-      font-weight: 500;
+      img {
+        width: 8.125rem;
+        @include ut.breakpoint {
+          width: 13.75rem;
+        }
+      }
     }
 
     @include ut.breakpoint {
       p span {
         display: inline;
+      }
+    }
+
+    .reserved {
+      font-size: inherit;
+      @include ut.breakpoint {
+        font-size: 1.125rem;
       }
     }
   }

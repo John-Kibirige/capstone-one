@@ -11,17 +11,23 @@
     @include ut.breakpoint {
       background-color: ut.$secondary-dark-blue;
       color: ut.$secondary-gray;
-      gap: ut.rem(90);
+      width: 100%;
+      margin: 0;
+      padding: 4.25rem 0 3.5rem;
 
       .copy-rights {
-        font-size: ut.rem(24);
-        flex: 2;
-        font-weight: 900;
-        text-align: right;
-      }
+        img {
+          width: 8.125rem;
+          @include ut.breakpoint {
+            width: 15rem;
+          }
+        }
 
-      .reserved {
-        flex: 3;
+        .reserved {
+          @include ut.breakpoint {
+            font-size: 1.125rem;
+          }
+        }
       }
     }
   }

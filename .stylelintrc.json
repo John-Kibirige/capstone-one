@@ -34,6 +34,8 @@
     "**/reset*.css",
     "**/bootstrap*.css",
     "**/*.js",
-    "**/*.jsx"
+    "**/*.jsx",
+    "**/*.scss",
+    "**/*.map"
   ]
 }

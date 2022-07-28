@@ -5,7 +5,7 @@
   padding: ut.rem(16);
 
   @include ut.breakpoint {
-    padding: ut.rem(29) ut.rem(155);
+    padding: ut.rem(29) 10%;
   }
 
   &-title {

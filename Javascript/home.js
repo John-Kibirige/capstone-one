@@ -63,22 +63,6 @@ const speakersData = [
       'Recognised as the most influential and most inpiratinal black entreprener in Britain, Author of the award winning book ABCs to student success',
     imageUrl: 'https://randomuser.me/api/portraits/women/10.jpg',
   },
-  {
-    name: 'Nell Pasricha',
-    briefly:
-      'The new York times best seller of five books and one of the most popular TED speakers in the world',
-    mission:
-      "'The 3 A's of Awesome' continue to define resillience through mental health challenges for millions of people",
-    imageUrl: 'https://randomuser.me/api/portraits/men/13.jpg',
-  },
-  {
-    name: 'Mellissa Doman, M.A',
-    briefly:
-      'Organisational Pshycologist, Mental at Work Specialist and Former Mental Health Therapist',
-    mission:
-      'Melissa Doma uses her years as a mental health professional to assist variety of organisations in implementing and becoming aware of the importace of emotinal and mental welness in a work place',
-    imageUrl: 'https://randomuser.me/api/portraits/women/5.jpg',
-  },
 ];
 
 // Creating elements related to the featured speakers section

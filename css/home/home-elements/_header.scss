@@ -132,7 +132,7 @@
   }
 
   &-humberger-menu {
-    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     z-index: 10;
     padding: ut.rem(5);
@@ -154,7 +154,7 @@
     }
 
     &.active .bar:nth-child(2) {
-      transform: translateX(ut.rem(300));
+      transform: translateX(-(ut.rem(300)));
     }
     &.active .bar:nth-child(1) {
       transform: translate(0, ut.rem(8)) rotate(45deg);
