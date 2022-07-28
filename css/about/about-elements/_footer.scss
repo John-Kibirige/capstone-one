@@ -1,1 +1,28 @@
 @forward '../../home/home-elements/footer';
+@use '../util' as ut;
+.footer {
+  &-partner {
+    @include ut.breakpoint {
+      display: none;
+    }
+  }
+
+  &-copyright {
+    @include ut.breakpoint {
+      background-color: ut.$secondary-dark-blue;
+      color: ut.$secondary-gray;
+      gap: ut.rem(90);
+
+      .copy-rights {
+        font-size: 24px;
+        flex: 2;
+        font-weight: 900;
+        text-align: right;
+      }
+
+      .reserved {
+        flex: 3;
+      }
+    }
+  }
+}

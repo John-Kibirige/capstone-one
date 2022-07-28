@@ -4,10 +4,18 @@
   font-family: ut.$open-sans;
   padding: ut.rem(16);
 
+  @include ut.breakpoint {
+    padding: 40px 155px;
+  }
+
   &-title {
     text-align: center;
     font-size: ut.rem(20);
     margin-block: ut.rem(8) ut.rem(32);
+
+    @include ut.breakpoint {
+      font-size: 29px;
+    }
 
     &::after {
       content: '';
@@ -16,6 +24,9 @@
       height: 0.1875rem;
       background-color: #ec5241;
       margin: ut.rem(11) auto;
+      @include ut.breakpoint {
+        width: 4%;
+      }
     }
   }
 
@@ -23,6 +34,10 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: ut.rem(25);
+
+    @include ut.breakpoint {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &-card {
@@ -43,6 +58,12 @@
         width: ut.rem(80);
         margin-top: -(ut.rem(53));
         margin-left: ut.rem(7);
+
+        @include ut.breakpoint {
+          width: 106px;
+          margin-top: -48px;
+          margin-left: 18px;
+        }
       }
     }
 
@@ -50,6 +71,9 @@
       .card-title {
         font-size: ut.rem(13);
         font-weight: 900;
+        @include ut.breakpoint {
+          font-size: 20px;
+        }
       }
 
       .card-description {
@@ -58,6 +82,9 @@
         color: ut.$secondary-orange;
         font-style: italic;
         font-weight: 700;
+        @include ut.breakpoint {
+          font-size: 14px;
+        }
 
         &::after {
           content: '';
@@ -73,12 +100,19 @@
         font-size: ut.rem(11);
         font-weight: 600;
         margin-top: ut.rem(6);
+        @include ut.breakpoint {
+          font-size: 14px;
+        }
       }
     }
   }
 
   .featured-speakers-card.active {
     display: none;
+
+    @include ut.breakpoint {
+      display: flex;
+    }
   }
 }
 
@@ -94,6 +128,9 @@
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
+  @include ut.breakpoint {
+    display: none;
+  }
 
   img {
     width: ut.rem(20);

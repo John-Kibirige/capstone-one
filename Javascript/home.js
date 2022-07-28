@@ -3,9 +3,17 @@ const humberger = document.querySelector('.header-humberger-menu');
 const headerContainer = document.querySelector('.header-container');
 
 humberger.addEventListener('click', () => {
-  console.log('btn works well');
   humberger.classList.toggle('active');
   headerContainer.classList.toggle('active');
+});
+
+// Monitor screen onchange
+window.addEventListener('resize', () => {
+  const windowSize = window.innerWidth;
+  if (windowSize >= 768) {
+    humberger.classList.remove('active');
+    headerContainer.classList.remove('active');
+  }
 });
 
 // Object for the featured speakers
@@ -46,7 +54,7 @@ const speakersData = [
       'Aron is currently Professor Emeritus of psybhology at the university of California, Santa Cruz',
     mission:
       "Aronson's work has focussed on the social dimension of human motivation MediaKeySystemAccess, such as the structural reasons for prejudice and aggression",
-    imageUrl: 'https://randomuser.me/api/portraits/men/4.jpg',
+    imageUrl: 'https://randomuser.me/api/portraits/men/20.jpg',
   },
   {
     name: 'Hayley Mulenda',
@@ -73,57 +81,91 @@ const speakersData = [
   },
 ];
 
-const featuredSpeakerLiteral = ` 
-    <section class="featured-speakers">
-    <h4 class="featured-speakers-title">Featured Speakers</h4>
-    <div class="featured-speakers-all-cards">
+// Creating elements related to the featured speakers section
+const featuredSpeakerSection = document.createElement('section');
+featuredSpeakerSection.classList.add('featured-speakers');
 
-     ${speakersData
-       .map(
-         (item, index) => `
-      <div class='featured-speakers-card ${index > 1 ? 'active' : ''}'>
-        <div class='card-image-container'>
-          <div class='card-bg-image'></div>
-          <img
-            src='${item.imageUrl}'
-            alt='user image'
-          />
-        </div>
-        <div class='card-text'>
-          <h5 class='card-title'>${item.name}</h5>
-          <p class='card-description'>
-            ${item.briefly}
-          </p>
+const fsTitle = document.createElement('h4');
+fsTitle.innerText = 'Featured Speakers';
+fsTitle.classList.add('featured-speakers-title');
+featuredSpeakerSection.appendChild(fsTitle);
 
-          <p class='academic-bg'>
-           ${item.mission}
-          </p>
-        </div>
-      </div>
-      `
-       )
-       .join('')}
-      
-       <div class="show-more">
-         <p>MORE</p>
-        <img src="../assets/chevron-down.svg" alt="" />
-       </div>
-       <div class="show-less active">
-         <p>LESS</p>
-          <img src="../assets/chevron-up.svg" alt="" />
-       </div>
-    </div>
-  </section>
-`;
+const fsAllCards = document.createElement('div');
+fsAllCards.classList.add('featured-speakers-all-cards');
+featuredSpeakerSection.appendChild(fsAllCards);
 
-// create a separate div element to add the created literal as inner text
-const featureSpeakers = document.createElement('div');
-featureSpeakers.innerHTML = featuredSpeakerLiteral;
+// loop though each card and append to featured speakers
+speakersData.forEach((item, index) => {
+  // for a single card
+  const fsCard = document.createElement('div');
+  fsCard.classList.add('featured-speakers-card');
+  if (index > 1) {
+    fsCard.classList.add('active');
+  }
 
+  const cardImageContainer = document.createElement('div');
+  cardImageContainer.classList.add('card-image-container');
+  fsCard.appendChild(cardImageContainer);
+
+  const cardBgImage = document.createElement('div');
+  cardBgImage.classList.add('card-bg-image');
+  cardImageContainer.appendChild(cardBgImage);
+
+  const cardImage = document.createElement('img');
+  cardImage.src = `${item.imageUrl}`;
+  cardImageContainer.appendChild(cardImage);
+
+  const cardText = document.createElement('div');
+  cardText.classList.add('card-text');
+  fsCard.appendChild(cardText);
+
+  const cardTitle = document.createElement('h5');
+  cardTitle.classList.add('card-title');
+  cardTitle.innerText = `${item.name}`;
+  cardText.appendChild(cardTitle);
+
+  const cardDescription = document.createElement('p');
+  cardDescription.classList.add('card-description');
+  cardDescription.innerText = ` ${item.briefly}`;
+  cardText.appendChild(cardDescription);
+
+  const cardAcademic = document.createElement('p');
+  cardAcademic.classList.add('academic-bg');
+  cardAcademic.innerText = `${item.mission}`;
+  cardText.appendChild(cardAcademic);
+
+  fsAllCards.appendChild(fsCard);
+});
+
+// Creating the show more and less elements and appending them to the featuredSpeakerSection
+const showMore = document.createElement('div');
+showMore.classList.add('show-more');
+const showMorePar = document.createElement('p');
+showMorePar.innerText = 'MORE';
+showMore.appendChild(showMorePar);
+
+const chevronMore = document.createElement('img');
+chevronMore.src = '../assets/chevron-down.svg';
+showMore.appendChild(chevronMore);
+featuredSpeakerSection.appendChild(showMore);
+
+const showLess = document.createElement('div');
+showLess.classList.add('show-less');
+showLess.classList.add('active');
+const showLessPar = document.createElement('p');
+showLessPar.innerText = 'LESS';
+showLess.appendChild(showLessPar);
+
+const chevronLess = document.createElement('img');
+chevronLess.src = '../assets/chevron-up.svg';
+showLess.appendChild(chevronLess);
+featuredSpeakerSection.appendChild(showLess);
+
+// load everything only when the window has loaded
 window.addEventListener('load', () => {
   const { body } = document;
 
-  body.insertBefore(featureSpeakers, body.children[2]);
+  body.insertBefore(featuredSpeakerSection, body.children[2]);
 
   // we want to show more or less
   const showMore = document.querySelector('.show-more');

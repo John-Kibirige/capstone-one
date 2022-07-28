@@ -5,6 +5,11 @@
   margin: ut.rem(24);
   position: relative;
 
+  @include ut.breakpoint {
+    margin: 0;
+    box-shadow: 1px 1px 12px ut.$secondary-light-blue;
+  }
+
   &-container {
     display: none;
 
@@ -18,11 +23,22 @@
       align-items: center;
       border-radius: ut.rem(6);
     }
+
+    @include ut.breakpoint {
+      display: block;
+      width: 100%;
+      position: static;
+      background-color: ut.$white;
+    }
   }
 
   &-nav-one {
     order: 3;
     width: 100%;
+
+    @include ut.breakpoint {
+      background-color: ut.$secondary-dark-blue;
+    }
 
     .nav-one-links {
       display: flex;
@@ -31,22 +47,67 @@
       width: 30%;
       margin-inline: auto;
       margin-top: ut.rem(16);
+
+      @include ut.breakpoint {
+        margin-top: 0;
+        width: 34vw;
+        height: 45px;
+        margin-right: 7%;
+      }
     }
   }
 
   &-nav-two {
     order: 2;
 
+    @include ut.breakpoint {
+      display: flex;
+      background-color: ut.$white;
+      padding: 12px 8%;
+      justify-content: space-around;
+      align-items: center;
+    }
+
     .logo {
       display: none;
+
+      @include ut.breakpoint {
+        display: block;
+        width: 220px;
+      }
     }
 
     .nav-list {
       text-align: center;
+
+      @include ut.breakpoint {
+        text-align: left;
+        display: flex;
+        margin-left: 50px;
+      }
+
+      .nav-item {
+        @include ut.breakpoint {
+          margin-right: 4vw;
+          a {
+            font-size: 16px;
+            color: ut.$secondary-dark-blue;
+
+            &:hover {
+              color: ut.$secondary-orange;
+            }
+          }
+        }
+      }
     }
 
     .nav-two-container {
       margin-top: ut.rem(26);
+
+      @include ut.breakpoint {
+        color: ut.$secondary-orange;
+        margin-top: 0;
+      }
     }
   }
 
@@ -55,6 +116,9 @@
     cursor: pointer;
     padding: ut.rem(5);
     background-color: white;
+    @include ut.breakpoint {
+      display: none;
+    }
 
     .bar {
       width: ut.rem(24);

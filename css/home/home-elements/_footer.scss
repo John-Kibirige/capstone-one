@@ -4,6 +4,9 @@
   &-partner {
     background-color: ut.$footer-based;
     padding: 24px;
+    @include ut.breakpoint {
+      padding: 32px 0 49px;
+    }
 
     &-title {
       text-align: center;
@@ -17,7 +20,7 @@
         display: block;
         content: '';
         background-color: ut.$gray-83;
-        width: 37%;
+        width: 20px;
         height: 2px;
         margin-inline: auto;
         margin-top: 11px;
@@ -29,6 +32,10 @@
       flex-wrap: wrap;
       justify-content: center;
       row-gap: 12px;
+
+      @include ut.breakpoint {
+        gap: 4%;
+      }
     }
   }
 
@@ -46,9 +53,19 @@
     align-items: center;
     padding: 24px 0;
 
+    p span {
+      display: block;
+    }
+
     .copy-rights {
       font-size: 18px;
       font-weight: 500;
+    }
+
+    @include ut.breakpoint {
+      p span {
+        display: inline;
+      }
     }
   }
 }

@@ -5,6 +5,10 @@
   color: ut.$secondary-gray;
   padding: ut.rem(36) ut.rem(16);
 
+  @include ut.breakpoint {
+    padding-block: ut.rem(54);
+  }
+
   &-title {
     text-align: center;
     width: 45%;
@@ -17,11 +21,21 @@
       height: ut.rem(3);
       background-color: ut.$secondary-orange;
       margin: ut.rem(15) auto;
+
+      @include ut.breakpoint {
+        width: 8%;
+      }
     }
   }
 
   &-cards {
     margin-top: ut.rem(36);
+
+    @include ut.breakpoint {
+      display: flex;
+      gap: 3px;
+      margin-inline: 12%;
+    }
 
     .card {
       display: grid;
@@ -31,6 +45,14 @@
       margin-top: ut.rem(12);
       background: ut.$secondary-light-blue;
       padding: ut.rem(12) ut.rem(8);
+      transition: all 0.2s ease-in-out;
+
+      @include ut.breakpoint {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-block: 16px;
+      }
 
       &-icon {
         width: ut.rem(54);
@@ -41,12 +63,26 @@
         grid-area: title;
         font-size: ut.rem(15);
         color: ut.$secondary-orange;
+        @include ut.breakpoint {
+          font-size: 20px;
+          line-height: 42px;
+        }
       }
 
       &-description {
         grid-area: description;
         font-size: ut.rem(13);
         letter-spacing: ut.rem(0.3);
+
+        @include ut.breakpoint {
+          text-align: center;
+          font-size: 14px;
+          line-height: 23px;
+        }
+      }
+
+      &:hover {
+        border: 3px solid ut.$white;
       }
     }
   }
@@ -66,6 +102,30 @@
     &:hover {
       color: ut.$secondary-gray;
       transform: scale(1.05);
+    }
+
+    @include ut.breakpoint {
+      display: none;
+    }
+  }
+
+  .see-whole-program {
+    display: block;
+    margin-top: 52px;
+    letter-spacing: 1.2px;
+    font-size: 15px;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 16%;
+      height: 0.1875rem;
+      background-color: ut.$white;
+      margin: 0 auto;
+      @include ut.breakpoint {
+        width: 215px;
+      }
     }
   }
 }

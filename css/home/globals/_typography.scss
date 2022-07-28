@@ -10,6 +10,10 @@ a {
   font-size: 21px;
   text-align: center;
   transition: all 0.2s ease-in-out;
+
+  @include ut.breakpoint {
+    font-size: 14px;
+  }
 }
 a:hover {
   color: ut.$secondary-orange;
@@ -18,4 +22,8 @@ a:hover {
 li {
   list-style-type: none;
   margin-bottom: 12px;
+
+  @include ut.breakpoint {
+    margin: 0;
+  }
 }

@@ -5,6 +5,9 @@
   padding: ut.rem(36) ut.rem(16);
   text-align: center;
   border-bottom: ut.rem(2) solid ut.$secondary-gray;
+  @include ut.breakpoint {
+    padding-inline: 25%;
+  }
 
   h2 {
     width: 50%;
@@ -13,6 +16,15 @@
     font-size: ut.rem(21);
     margin-bottom: ut.rem(17);
 
+    @include ut.breakpoint {
+      font-size: 30px;
+      width: 100%;
+
+      p {
+        font-size: 16px;
+      }
+    }
+
     &::after {
       content: '';
       display: block;
@@ -20,12 +32,20 @@
       height: 0.1875rem;
       background-color: #ec5241;
       margin: 0.6875rem auto;
+
+      @include ut.breakpoint {
+        width: 40px;
+      }
     }
   }
 
   .logo-description {
     .display-on-desk {
       display: none;
+
+      @include ut.breakpoint {
+        display: block;
+      }
     }
   }
 
@@ -33,6 +53,11 @@
     border: ut.rem(2) solid ut.$secondary-gray;
     padding: ut.rem(47);
     margin-top: ut.rem(50);
+
+    @include ut.breakpoint {
+      width: 72%;
+      margin-inline: auto;
+    }
 
     img {
       width: ut.rem(253);

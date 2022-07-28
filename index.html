@@ -29,7 +29,7 @@
           <ul class="nav-one-links">
             <li>
               <a href="#">
-                <?xml version="1.0"?><svg
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 50 50"
                   width="50px"
@@ -62,6 +62,16 @@
                 </svg>
               </a>
             </li>
+
+            <li>
+              <a href="#" class="display-on-desk">English</a>
+            </li>
+            <li>
+              <a href="#" class="display-on-desk">MyPage</a>
+            </li>
+            <li>
+              <a href="#" class="display-on-desk">Logout</a>
+            </li>
           </ul>
         </nav>
 
@@ -74,9 +84,9 @@
           <div class="nav-two-container">
             <ul class="nav-list">
               <li class="nav-item"><a href="./html/about.html">About</a></li>
-              <li class="nav-item"><a href="#">Program</a></li>
+              <li class="nav-item"><a href="#program">Program</a></li>
               <li class="nav-item"><a href="#join">Join</a></li>
-              <li class="nav-item"><a href="#">Sponsor</a></li>
+              <li class="nav-item"><a href="#sponsor">Sponsor</a></li>
               <li class="nav-item"><a href="#">News</a></li>
             </ul>
           </div>
@@ -111,7 +121,7 @@
       </section>
 
       <!-- main program section -->
-      <section class="main-program">
+      <section id="program" class="main-program">
         <h2 class="main-program-title">Main Program</h2>
         <div class="main-program-cards">
           <!-- card -->
@@ -175,7 +185,10 @@
           </div>
         </div>
 
-        <a href="" id="join" class="main-program-join"
+        <div class="display-on-desk">
+          <a class="see-whole-program" href="#">SEE THE WHOLE PROGRAM</a>
+        </div>
+        <a href="" id="join" class="main-program-join display-on-mob"
           >Join PLC Global Summit 2022</a
         >
       </section>
@@ -183,7 +196,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer-partner">
+      <div class="footer-partner" id="sponsor">
         <h4 class="footer-partner-title">Partners</h4>
         <div class="footer-partner-container">
           <img
@@ -216,10 +229,7 @@
 
       <div class="footer-copyright">
         <p class="copy-rights">&copy; PLC- United states</p>
-        <p class="reserved">
-          2022 PLC. <br />
-          Some Rights reserved
-        </p>
+        <p class="reserved">2022 PLC. <span>Some Rights reserved</span></p>
       </div>
     </footer>
 

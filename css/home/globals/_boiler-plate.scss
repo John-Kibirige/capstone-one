@@ -22,6 +22,10 @@ body {
   background-size: contain;
   background-position: top left;
   background-repeat: no-repeat;
+
+  @include ut.breakpoint {
+    background-image: url(https://th.bing.com/th/id/R.c1e161d1978146d7befa26e8c8cda836?rik=MTUqwup1jYGVfQ&riu=http%3a%2f%2ftravelsandliving.com%2fwp-content%2fuploads%2f2014%2f10%2fBackground-Gray-1024x640.jpg&ehk=Qsv1NRcIIlBKdQMnwKtT%2biPKYh3xMphWJaDxt00EqEQ%3d&risl=&pid=ImgRaw&r=0);
+  }
 }
 
 // Images and svg's
@@ -32,8 +36,12 @@ img {
 
 svg {
   fill: ut.$white;
-  width: 28px;
+  width: ut.rem(28);
   transition: all 0.2s ease-in-out;
+
+  @include ut.breakpoint {
+    display: block;
+  }
 }
 
 svg:hover {
@@ -42,19 +50,42 @@ svg:hover {
 
 // All buttons
 button {
-  color: ut.$secondary-gray;
-  background: ut.$secondary-orange;
+  background: ut.$white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: ut.rem(10) ut.rem(20);
+  font-size: 1rem;
   font-weight: 500;
   font-family: ut.$open-sans;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: ut.rem(0.5);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  color: ut.$secondary-orange;
+
+  @include ut.breakpoint {
+    border: ut.rem(5) solid ut.$secondary-orange;
+    height: ut.rem(45);
+    color: ut.$secondary-orange;
+  }
 }
 
 button:hover {
   transform: scale(1.05);
+}
+
+// display-on-desk
+.display-on-desk {
+  display: none;
+
+  @include ut.breakpoint {
+    display: block;
+  }
+}
+
+// display-on-mob
+.display-on-mobile {
+  display: block;
+  @include ut.breakpoint {
+    display: none;
+  }
 }
