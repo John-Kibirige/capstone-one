@@ -129,7 +129,7 @@ showMorePar.innerText = 'MORE';
 showMore.appendChild(showMorePar);
 
 const chevronMore = document.createElement('img');
-chevronMore.src = '../assets/chevron-down.svg';
+chevronMore.src = './assets/chevron-down.svg';
 showMore.appendChild(chevronMore);
 featuredSpeakerSection.appendChild(showMore);
 
@@ -141,7 +141,7 @@ showLessPar.innerText = 'LESS';
 showLess.appendChild(showLessPar);
 
 const chevronLess = document.createElement('img');
-chevronLess.src = '../assets/chevron-up.svg';
+chevronLess.src = './assets/chevron-up.svg';
 showLess.appendChild(chevronLess);
 featuredSpeakerSection.appendChild(showLess);
 
