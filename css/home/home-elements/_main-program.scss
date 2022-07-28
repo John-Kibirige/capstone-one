@@ -1,0 +1,132 @@
+@use '../util' as ut;
+
+.main-program {
+  background-color: ut.$secondary-dark-blue;
+  color: ut.$secondary-gray;
+  padding: ut.rem(36) ut.rem(16);
+
+  @include ut.breakpoint {
+    padding-block: ut.rem(54);
+  }
+
+  &-title {
+    text-align: center;
+    width: 45%;
+    margin-inline: auto;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 20%;
+      height: ut.rem(3);
+      background-color: ut.$secondary-orange;
+      margin: ut.rem(15) auto;
+
+      @include ut.breakpoint {
+        width: 8%;
+      }
+    }
+  }
+
+  &-cards {
+    margin-top: ut.rem(36);
+
+    @include ut.breakpoint {
+      display: flex;
+      gap: ut.rem(3);
+      margin-inline: 12%;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: ut.rem(70) ut.rem(95) auto;
+      grid-template-areas: 'ico title description description';
+      align-items: center;
+      margin-top: ut.rem(12);
+      background: ut.$secondary-light-blue;
+      padding: ut.rem(12) ut.rem(8);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+
+      @include ut.breakpoint {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-block: 1rem;
+      }
+
+      &-icon {
+        width: ut.rem(54);
+        grid-area: ico;
+      }
+
+      &-title {
+        grid-area: title;
+        font-size: ut.rem(15);
+        color: ut.$secondary-orange;
+        @include ut.breakpoint {
+          font-size: ut.rem(18);
+          line-height: ut.rem(42);
+        }
+      }
+
+      &-description {
+        grid-area: description;
+        font-size: ut.rem(13);
+        letter-spacing: ut.rem(0.3);
+
+        @include ut.breakpoint {
+          text-align: center;
+          font-size: ut.rem(14);
+          line-height: ut.rem(23);
+        }
+      }
+
+      &:hover {
+        border: ut.rem(3) solid ut.$white;
+      }
+    }
+  }
+
+  &-join {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    width: 76%;
+    padding: ut.rem(12) ut.rem(12);
+    margin-top: ut.rem(46);
+    margin-inline: auto;
+    background-color: ut.$secondary-orange;
+    color: ut.$secondary-gray;
+    margin-bottom: ut.rem(14);
+
+    &:hover {
+      color: ut.$secondary-gray;
+      transform: scale(1.05);
+    }
+
+    @include ut.breakpoint {
+      display: none;
+    }
+  }
+
+  .see-whole-program {
+    display: block;
+    margin-top: ut.rem(52);
+    letter-spacing: ut.rem(1.2);
+    font-size: ut.rem(15);
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 16%;
+      height: 0.1875rem;
+      background-color: ut.$white;
+      margin: 0 auto;
+      @include ut.breakpoint {
+        width: ut.rem(215);
+      }
+    }
+  }
+}
