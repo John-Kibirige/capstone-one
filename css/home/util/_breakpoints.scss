@@ -1,6 +1,0 @@
-// a mixin for the only break point we have for this project
-@mixin breakpoint {
-  @media (min-width: 48em) {
-    @content;
-  }
-}
