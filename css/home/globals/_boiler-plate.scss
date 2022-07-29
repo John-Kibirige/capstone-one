@@ -18,12 +18,12 @@ body {
   background-color: ut.$secondary-gray;
   color: ut.$secondary-dark-blue;
   font-family: ut.$open-sans;
-  background-image: url(../../../assets/main-bg-project.jpg);
-  background-size: contain;
+  background-image: url(https://th.bing.com/th/id/R.c1e161d1978146d7befa26e8c8cda836?rik=MTUqwup1jYGVfQ&riu=http%3a%2f%2ftravelsandliving.com%2fwp-content%2fuploads%2f2014%2f10%2fBackground-Gray-1024x640.jpg&ehk=Qsv1NRcIIlBKdQMnwKtT%2biPKYh3xMphWJaDxt00EqEQ%3d&risl=&pid=ImgRaw&r=0);
   background-position: top left;
   background-repeat: no-repeat;
 
   @include ut.breakpoint {
+    background-size: contain;
     background-image: url(https://th.bing.com/th/id/R.c1e161d1978146d7befa26e8c8cda836?rik=MTUqwup1jYGVfQ&riu=http%3a%2f%2ftravelsandliving.com%2fwp-content%2fuploads%2f2014%2f10%2fBackground-Gray-1024x640.jpg&ehk=Qsv1NRcIIlBKdQMnwKtT%2biPKYh3xMphWJaDxt00EqEQ%3d&risl=&pid=ImgRaw&r=0);
   }
 }

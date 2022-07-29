@@ -31,7 +31,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      row-gap: ut.rem(12);
+      gap: 0.875rem;
 
       @include ut.breakpoint {
         gap: 4%;
@@ -43,6 +43,7 @@
     width: ut.rem(100);
     display: block;
     margin-right: ut.rem(10);
+    height: 1.4375rem;
   }
 
   &-copyright {
@@ -54,7 +55,7 @@
     padding: ut.rem(24) 0;
 
     @include ut.breakpoint {
-      width: 52%;
+      width: 78%;
       margin: 2.5rem auto;
     }
 
@@ -95,4 +96,9 @@
   text-align: center;
   font-size: ut.rem(24);
   height: ut.rem(31);
+}
+
+.ab-helper {
+  height: 2.5rem;
+  margin-top: -0.625rem;
 }
