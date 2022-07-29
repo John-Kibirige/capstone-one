@@ -1,0 +1,92 @@
+@use '../util' as ut;
+
+.past-summits {
+  background: white;
+  padding: ut.rem(28) ut.rem(24);
+
+  @include ut.breakpoint {
+    padding-bottom: ut.rem(100);
+  }
+
+  &-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: ut.rem(13);
+    font-size: ut.rem(20);
+
+    @include ut.breakpoint {
+      font-size: 25px;
+      margin-top: 29px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 0.1875rem;
+      background-color: #ec5241;
+      margin: 0.6875rem auto;
+    }
+  }
+
+  &-description {
+    text-align: center;
+    line-height: ut.rem(34);
+    font-size: 1rem;
+    margin-bottom: ut.rem(27);
+  }
+
+  .past-summit-container {
+    @include ut.breakpoint {
+      display: flex;
+      width: 768px;
+      height: 224px;
+      gap: 22px;
+      margin-inline: auto;
+    }
+    .wrapper {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .wrapper p:first-of-type {
+      font-size: 2rem;
+
+      margin-bottom: ut.rem(10);
+    }
+
+    .thailand {
+      background-image: url(https://thumbs.dreamstime.com/x/novosibirsk-russia-december-gandapas-many-people-large-audience-conference-seminar-meeting-68467903.jpg);
+    }
+
+    .india {
+      background-image: url(https://i2.wp.com/bigharvestcreative.com/wp-content/uploads/2018/11/conference_people.jpg?resize=705%2C470&ssl=1);
+    }
+    .visited {
+      width: 100%;
+      margin-bottom: ut.rem(18);
+      height: 24vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: inset -100vw -100vh #ec534280;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      @include ut.breakpoint {
+        height: 100%;
+      }
+
+      &:hover {
+        box-shadow: inset -100vw -100vh transparent;
+
+        .wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}

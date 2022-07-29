@@ -1,0 +1,104 @@
+@use '../util' as ut;
+
+.footer {
+  &-partner {
+    background-color: ut.$footer-based;
+    padding: ut.rem(24);
+    @include ut.breakpoint {
+      padding: 2rem 0 ut.rem(49);
+    }
+
+    &-title {
+      text-align: center;
+      color: ut.$secondary-gray;
+      font-size: ut.rem(20);
+      margin-bottom: ut.rem(23);
+      width: 34%;
+      margin-inline: auto;
+
+      &::after {
+        display: block;
+        content: '';
+        background-color: ut.$secondary-orange;
+        width: ut.rem(20);
+        height: ut.rem(2);
+        margin-inline: auto;
+        margin-top: ut.rem(11);
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.875rem;
+
+      @include ut.breakpoint {
+        gap: 4%;
+      }
+    }
+  }
+
+  &-partner-image {
+    width: ut.rem(100);
+    display: block;
+    margin-right: ut.rem(10);
+    height: 1.4375rem;
+  }
+
+  &-copyright {
+    background: inherit;
+    color: ut.$secondary-dark-blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: ut.rem(24) 0;
+
+    @include ut.breakpoint {
+      width: 78%;
+      margin: 2.5rem auto;
+    }
+
+    p span {
+      display: block;
+    }
+
+    .copy-rights {
+      img {
+        width: 8.125rem;
+        @include ut.breakpoint {
+          width: 13.75rem;
+        }
+      }
+    }
+
+    @include ut.breakpoint {
+      p span {
+        display: inline;
+      }
+    }
+
+    .reserved {
+      font-size: inherit;
+      @include ut.breakpoint {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.reduce-80 {
+  width: ut.rem(80);
+}
+
+.google {
+  color: ut.$secondary-gray;
+  text-align: center;
+  font-size: ut.rem(24);
+  height: ut.rem(31);
+}
+
+.ab-helper {
+  height: 2.5rem;
+  margin-top: -0.625rem;
+}

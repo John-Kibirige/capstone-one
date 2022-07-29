@@ -1,0 +1,111 @@
+@use '../util' as ut;
+.main-intro {
+  margin-top: ut.rem(47);
+  padding: ut.rem(18) ut.rem(18) ut.rem(50) ut.rem(18);
+
+  @include ut.breakpoint {
+    padding-bottom: ut.rem(95);
+  }
+  &-title {
+    font-family: ut.$poppins;
+    font-size: ut.rem(35);
+    text-transform: uppercase;
+    line-height: ut.rem(40);
+    font-weight: 700;
+    text-align: left;
+    color: ut.$secondary-orange;
+    background: url(https://previews.123rf.com/images/daneeshe/daneeshe1503/daneeshe150300038/37838396-abstract-orange-medical-background-world-health-day-vector-illustration.jpg?fj=1);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: ut.rem(40);
+
+    @include ut.breakpoint {
+      margin-top: ut.rem(23);
+      max-width: 50vw;
+      margin-inline: auto;
+      font-size: ut.rem(41);
+
+      &::after {
+        content: '';
+        display: block;
+        width: 12%;
+        height: ut.rem(4);
+        background-color: #ec5241;
+        margin: ut.rem(11) auto;
+      }
+    }
+  }
+
+  &-description-cont {
+    background-color: ut.$primary-purple;
+    padding: ut.rem(14);
+    background-color: #fff;
+
+    @include ut.breakpoint {
+      width: 70%;
+      margin-inline: auto;
+      font-size: 1rem;
+      padding: ut.rem(30) ut.rem(36);
+    }
+  }
+
+  &-description {
+    text-align: center;
+  }
+
+  .display-on-desk {
+    display: none;
+
+    @include ut.breakpoint {
+      display: block;
+      text-align: center;
+      margin-top: ut.rem(12);
+    }
+  }
+
+  &-contact-email {
+    margin-top: ut.rem(40);
+
+    p {
+      font-size: ut.rem(13);
+      text-align: center;
+
+      @include ut.breakpoint {
+        font-size: ut.rem(20);
+      }
+    }
+
+    a {
+      font-size: ut.rem(16);
+      display: block;
+      width: 50%;
+      margin-inline: auto;
+      color: ut.$secondary-dark-blue;
+
+      @include ut.breakpoint {
+        font-size: ut.rem(24);
+      }
+
+      &:hover {
+        color: ut.$secondary-orange;
+        @include ut.breakpoint {
+          color: ut.$secondary-gray;
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 73%;
+        height: ut.rem(2);
+        background-color: ut.$secondary-dark-blue;
+        display: block;
+        margin-inline: auto;
+
+        @include ut.breakpoint {
+          width: ut.rem(51);
+        }
+      }
+    }
+  }
+}
