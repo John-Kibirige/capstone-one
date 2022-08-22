@@ -1,6 +1,6 @@
 # Capstone Project One
 
-This is a capstone project for the HTML and CSS Module
+This is a capstone project for the HTML and CSS Module at Microverse. It is a basic conference website with two pages, mainly the home page and the about page. 
 
 ## Live Demo
 
